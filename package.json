@@ -7,6 +7,7 @@
   "scripts": {
     "start": "pm2 start ecosystem.config.js && pm2 logs",
     "stop": "pm2 kill",
+    "flush": "pm2 flush",
     "logs": "pm2 logs",
     "monitor": "pm2 monit",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,9 +32,7 @@
     "pm2": "^3.3.1",
     "ramda": "^0.26.1",
     "react": "^16.8.4",
-    "vision": "^5.4.4"
-  },
-  "devDependencies": {
+    "vision": "^5.4.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
