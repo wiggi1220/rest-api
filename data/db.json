@@ -1,0 +1,104 @@
+{
+  "messages": [
+    {
+      "id": "id",
+      "timestamp": "timestamp",
+      "message": "message"
+    },
+    {
+      "id": "d286a4e791f85f0c4c57",
+      "message": "Hey what a nice awesome clever message",
+      "timestamp": "1550762401934"
+    },
+    {
+      "id": "987305809e2802f2650b",
+      "message": "Hey what a nice awesome clever message",
+      "timestamp": "1550762581411"
+    },
+    {
+      "id": "6ca501078628d8e296b6",
+      "message": "Hey what a nice awesome clever message",
+      "timestamp": "1550762583178"
+    },
+    {
+      "id": "35b12c320c7cd3dc270a",
+      "message": "Hey what a nice awesome clever message",
+      "timestamp": "1550762705729"
+    },
+    {
+      "id": "1dfdd9edec35282a3c63",
+      "message": "Update worked fine",
+      "timestamp": "1550762897350"
+    },
+    {
+      "id": "f3be9e3ec09855b24041",
+      "message": "Alde das muss worken",
+      "timestamp": "1550835507596"
+    }
+  ],
+  "users": [
+    {
+      "id": "48652884e02ce0d44f09",
+      "username": "coolwigsen",
+      "email": "mail@coolemail.cool",
+      "password": "$2b$10$hILGIWNa5OtrB95YpxrOhu2pwna6MosLfy.wjTepQfhOW4dJxVMZ6",
+      "hasAvatar": false
+    },
+    {
+      "id": "5f767f0f661c21b03a9e",
+      "username": "swagwigsen",
+      "email": "swag@coolemail.cool",
+      "password": "$2b$10$9rpRByoNXhbUmUaA8Q0nCOxpkARMYBUy2wh4h4rJNPXKB8kp6AGzK",
+      "hasAvatar": false
+    },
+    {
+      "id": "7a2f844ee22af9c45b46",
+      "username": "Bromigo",
+      "email": "bro@amigo.com",
+      "password": "$2b$10$dOIz9u.OUKFiyTpTuSeQHeR/5hckN2S.dAVEUJZ230kf1oR4KtE4m",
+      "hasAvatar": false
+    },
+    {
+      "id": "f7558c189ba047eedcc9",
+      "username": "MilipPorgner",
+      "email": "milip@porgner.hotmail",
+      "password": "$2b$10$aBKDUOZPTKEJOwg5l08XRO9dzaaIZsGmcLQTAeDPSFvhKHHUbqERy",
+      "hasAvatar": true
+    },
+    {
+      "id": "b17384c793023e3b0b54",
+      "username": "Brooomigo",
+      "email": "swaggy@bromigo.net",
+      "password": "$2b$10$dR2Mvz7ZLUdPUiY65n/P4.r4t5lsC1QQNsm8kC0qQKs8vy3Mst1ce",
+      "hasAvatar": false
+    },
+    {
+      "id": "27e719098650c607ddc3",
+      "username": "Peter Enis",
+      "email": "peter@enis.com",
+      "password": "$2b$10$23jnfjmLPoaX9U1OUo58Y.8pVS29Lpw9b2FmZwfzjTkx6iU7nndKW",
+      "hasAvatar": true
+    },
+    {
+      "id": "679107183e1950cbd4cb",
+      "username": "Ali",
+      "email": "ali@neighbor.de",
+      "password": "$2b$10$lb7zrQkD2V7DsHA8mdA6hOoqb5gWAc2gS24fnHHkHdb3QCu9081d.",
+      "hasAvatar": true
+    },
+    {
+      "id": "be53ff6b7111a8f56c92",
+      "username": "Marco",
+      "email": "marco@boss.it",
+      "password": "$2b$10$k0Gpav6djIyw5HLxzrvnD.3H2Qh8NcvK/dEd51BuFrt7vWsrm2IRS",
+      "hasAvatar": true
+    },
+    {
+      "id": "26ce05bfde28a12cc0ef",
+      "username": "lopper auramann",
+      "email": "l@opMann.mail",
+      "password": "$2b$10$9RR7XkHx5CFfR4BuoJUW3.44mvXNf4ncSj8p/ozE6opqlWk6GPO7e",
+      "hasAvatar": false
+    }
+  ]
+}
