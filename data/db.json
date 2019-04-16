@@ -82,7 +82,7 @@
     {
       "id": "679107183e1950cbd4cb",
       "username": "Ali",
-      "email": "ali@neighbor.de",
+      "email": "ali@neighbor.com",
       "password": "$2b$10$lb7zrQkD2V7DsHA8mdA6hOoqb5gWAc2gS24fnHHkHdb3QCu9081d.",
       "hasAvatar": true
     },
@@ -96,9 +96,9 @@
     {
       "id": "26ce05bfde28a12cc0ef",
       "username": "lopper auramann",
-      "email": "l@opMann.mail",
-      "password": "$2b$10$9RR7XkHx5CFfR4BuoJUW3.44mvXNf4ncSj8p/ozE6opqlWk6GPO7e",
-      "hasAvatar": false
+      "email": "l@oppersen.es",
+      "password": "$2b$10$MzIIM8rt8Q0iRb8qgq8ZnuI9KXA87ZcuOSFIsJ8v5ipivBfC7NQFO",
+      "hasAvatar": true
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { saveProfilePic } from "../../middleware/user";
+import { addAvatar, saveProfilePic } from "../../middleware/user";
 
 exports.plugin = {
   name: "uploadAvatar",
@@ -8,6 +8,9 @@ exports.plugin = {
       method: "POST",
       path: "/api/users/{user_id}/avatar",
       options: {
+        cors: {
+          origin: ["*"]
+        },
         payload: {
           maxBytes: 1000 * 1000,
           output: "stream",
@@ -18,8 +21,7 @@ exports.plugin = {
       handler: async (request, h) => {
         const user_id = request.params.user_id;
         const payload = request.payload;
-        const uploadSuccess = await saveProfilePic(user_id, payload);
-        uploadSuccess.then(addAvatar);
+        saveProfilePic(user_id, payload).then(userId => addAvatar(userId));
         return h
           .response({ status: "success" })
           .type("application/json")

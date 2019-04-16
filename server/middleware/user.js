@@ -41,6 +41,7 @@ const getUserList = async () => {
 const getUser = async id => {
   const db = await getDatabase();
   const user = await findUserById(db, id);
+
   if (!user) {
     throw Boom.notFound("user not found!");
   }
@@ -154,36 +155,42 @@ const verifyCredentials = async (request, h) => {
 };
 
 const saveProfilePic = async (user_id, payload) => {
+  const uploadedFile = payload.file;
+  console.log("1st", uploadedFile);
+
+  if (!uploadedFile) {
+    throw Boom.notFound("No file has been send");
+  }
+  const buffer_data = uploadedFile._data;
+
+  if (!buffer_data) {
+    throw Boom.notFound("No filedata existing");
+  }
+  const fileExtension = path.extname(uploadedFile.hapi.filename);
+
+  if (
+    fileExtension !== ".jpg" &&
+    fileExtension !== ".jpeg" &&
+    fileExtension !== ".png"
+  ) {
+    throw Boom.notAcceptable(
+      `${fileExtension} is not an acceptable file format! It has to be .jpg, .jpeg or .png`
+    );
+  }
+
+  const filename = path.format({
+    root: __dirname,
+    dir: UPLOAD_PATH,
+    name: user_id,
+    ext: fileExtension
+  });
+  console.log("filename", filename);
+
+  const existingPic = await getFilePath(user_id);
+  if (existingPic) {
+    fs.unlink(existingPic);
+  }
   return new Promise((resolve, reject) => {
-    const uploadedFile = payload.file;
-
-    if (!uploadedFile) {
-      throw Boom.notFound("No file has been send");
-    }
-    const buffer_data = uploadedFile._data;
-
-    if (!buffer_data) {
-      throw Boom.notFound("No filedata existing");
-    }
-    const fileExtension = path.extname(uploadedFile.hapi.filename);
-
-    if (
-      fileExtension !== ".jpg" &&
-      fileExtension !== ".jpeg" &&
-      fileExtension !== ".png"
-    ) {
-      throw Boom.notAcceptable(
-        `${fileExtension} is not an acceptable file format! It has to be .jpg, .jpeg or .png`
-      );
-    }
-
-    const filename = path.format({
-      root: __dirname,
-      dir: UPLOAD_PATH,
-      name: request.auth.credentials.id,
-      ext: fileExtension
-    });
-
     fs.writeFile(filename, buffer_data, err => {
       if (err) {
         console.err("There was a problem writing the file on disk", err);
@@ -209,6 +216,7 @@ const getFilePath = id => {
 };
 
 const addAvatar = id => {
+  console.log("insideaddAvatar");
   updateUser(id, { hasAvatar: true });
 };
 
@@ -216,6 +224,7 @@ export {
   getUserList,
   getUser,
   addUser,
+  addAvatar,
   getFilePath,
   updateUser,
   deleteUser,

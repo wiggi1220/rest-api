@@ -42,7 +42,6 @@ const createUser = (db, newUser) => {
 };
 
 const assignUser = (db, id, updatedUser) => {
-  // check what is returned
   return db
     .get("users")
     .find({ id })

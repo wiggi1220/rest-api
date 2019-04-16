@@ -10,7 +10,6 @@ exports.plugin = {
       handler: async (request, h) => {
         const id = request.params.id;
         const user = await getUser(id);
-
         return h
           .response(user)
           .type("application/json")

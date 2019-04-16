@@ -19,7 +19,10 @@ exports.plugin = {
       },
       handler: async (request, h) => {
         return h
-          .response({ access_token: createToken(request.pre.user) })
+          .response({
+            access_token: createToken(request.pre.user),
+            ...request.pre.user
+          })
           .type("application/json")
           .code(200);
       }

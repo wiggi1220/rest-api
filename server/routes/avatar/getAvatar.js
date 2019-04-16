@@ -6,7 +6,7 @@ exports.plugin = {
   register: async (server, options) => {
     server.route({
       method: "GET",
-      path: "/api/users/avatar/{id}",
+      path: "/api/users/{id}/avatar",
       config: {
         auth: false
       },
